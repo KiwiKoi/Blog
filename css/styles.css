@@ -1,0 +1,20 @@
+body {
+    font-family: helvetica;
+}
+
+h1 {
+    color: purple;
+    font-weight: bold
+}
+
+h2 {
+    color: blue;
+}
+
+p {
+    /* font-family: arial; */
+}
+
+header {
+    background-color: seashell;
+}
