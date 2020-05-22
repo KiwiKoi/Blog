@@ -7,27 +7,31 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Merriweather|Montserrat|Sacramento&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <nav>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="news.html">News</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="about.html">About</a></li>
+            <li><a class="logo" class="nav-links" href="index.html">My Blog</a></li>
+            <li><a class="nav-links" href="#content">Content</a></li>
+            <li><a class="nav-links" href="#contact">Contact</a></li>
+            <li><a class="nav-links" href="#">About</a></li>
         </ul>
+        <div class="burger">
+            
+        </div>
     </nav>
     <header>
         <h1 class="heading">This is a blog</h1>
         <p>Hello 😀.</p>
     </header>
 
-    <div class="main">
+    <div id="content" class="main">
         <hr>
-        <section>
+        <div class="intro">
             <p>This is an introduction.</p>
-        </section>
+        </div>
         <section class="main-content">
             <div class="wrapper">
                 <article>
@@ -60,7 +64,7 @@
                 </article>
             </div>
         </section>
-        <section class="contact">
+        <section id="contact" class="contact">
             <h2>Get In Touch</h2>
             <p class="contact-message">Shhh.</p>
             <a class="btn" href="mailto:blablabla">CONTACT ME</a>

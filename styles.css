@@ -1,6 +1,10 @@
-body {
-    margin:0;
+*{
+    margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: "Montserrat", serif;
     text-align: center;
     min-height: 100%;
@@ -16,6 +20,8 @@ h2 {
 }
 
 nav {
+    display: flex;
+    justify-content: space-around;
     position : relative;
     z-index: 9;
 }
@@ -23,7 +29,7 @@ nav {
 header {
     background-color: rgb(250, 181, 153);
     position: relative;
-    padding-top: 100px;
+    padding-top: 200px;
     padding-bottom: 50px;
     text-align: center;
 }
@@ -36,43 +42,22 @@ ul {
     width: 100%;
     overflow: auto;
     background-color: #dddddd;
-}
-
-li {
-    display: inline;
-    float: left;
-}
-
-li a {
-    display: block;
-    padding: 8px;
-    width: 100px;
-    color: #000;
-    text-align: center;
+    border: 1px solid #c9c9c9;
 }
 
 a {
     text-decoration: none;
 }
 
-li a:hover {
-    background-color: #555;
-    color: white;
-}
-
-.active {
-    background-color: aqua;
-    color: #000;
-}
-
 hr {
-    width:5%;
+    width:10%;
     border: dotted #EAF6F6 6px;
     border-bottom: none;
+    margin: auto;
   }
 
 footer {
-    padding: 50px 0 20px;
+    padding: 20px 0 20px;
 }
 
 footer, .main {
@@ -83,8 +68,11 @@ article {
  box-sizing: border-box;
  border-style: solid;
  border-width: 1px;
- border-radius: 50px;
+ border-radius: 20px;
+ margin: 2px;
  text-align: center;
+ height: 20vh;
+ width: 30vw;
 }
 
 article p {
@@ -94,14 +82,56 @@ article p {
     text-overflow: ellipsis;
 }
 
+.logo {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 20px;
+    float: left;
+}
+
+.nav-links {
+    display: block;
+    justify-content: space-around;
+    width: 100px;
+    color: #000;
+    text-align: center;
+    float: right;
+}
+
+.nav-links:hover {
+    background-color: #555;
+    color: white;
+}
 
 .wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    padding: 20px;
   }
 
 .main {
-    padding: 100px 0 100px 0;
+    padding: 100px 0 50px 0;
+}
+
+.intro {
+    padding: 20px 0 0 0;
+}
+
+.active {
+    background-color: aqua;
+    color: #000;
+}
+
+.burger {
+    display: none;
+}
+
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: rgb(226,226,226);
+    margin: 5px;
 }
 
 .btn {
@@ -115,4 +145,25 @@ article p {
 	font-size:20px;
 	padding:16px 31px;
 	text-decoration:none;
+}
+
+@media screen and (max-width:1024px) {
+    nav ul {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width:768px) {
+    nav ul {
+        display: none;
+    }
+}
+
+@supports (display: flex) {
+    @media screen and (min-width: 900px) {
+        article {
+            display: flex;
+        }
+    }
 }
