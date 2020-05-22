@@ -1,5 +1,9 @@
 body {
-    font-family: helvetica;
+    margin:0;
+    padding: 0;
+    font-family: "Montserrat", serif;
+    text-align: center;
+    min-height: 100%;
 }
 
 h1 {
@@ -11,6 +15,104 @@ h2 {
     color: blue;
 }
 
+nav {
+    position : relative;
+    z-index: 9;
+}
+
 header {
-    background-color: seashell;
+    background-color: rgb(250, 181, 153);
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    position: fixed;
+    width: 100%;
+    overflow: auto;
+    background-color: #dddddd;
+}
+
+li {
+    display: inline;
+    float: left;
+}
+
+li a {
+    display: block;
+    padding: 8px;
+    width: 100px;
+    color: #000;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #555;
+    color: white;
+}
+
+.active {
+    background-color: aqua;
+    color: #000;
+}
+
+hr {
+    width:5%;
+    border: dotted #EAF6F6 6px;
+    border-bottom: none;
+  }
+
+footer {
+    padding: 50px 0 20px;
+}
+
+footer, .main {
+    background-color: rgb(252, 220, 190);
+}
+
+article {
+ box-sizing: border-box;
+ border-style: solid;
+ border-width: 1px;
+ border-radius: 50px;
+ text-align: center;
+}
+
+article p {
+    width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+.main {
+    padding: 100px 0 100px 0;
+}
+
+.btn {
+	background:linear-gradient(to bottom, #fcc073 5%, #f3d983 100%);
+	background-color:#fabb6a;
+	border-radius:8px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:'Montserrat', sans-serif;
+	font-size:20px;
+	padding:16px 31px;
+	text-decoration:none;
 }
