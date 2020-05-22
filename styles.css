@@ -156,9 +156,8 @@ ul {
     font-size: 14px;
 }
 
-.nav-links:hover {
-    background-color: #555;
-    color: white;
+.nav-links a:hover {
+    color: rgb(130, 169, 219);
 }
 
 
