@@ -58,15 +58,25 @@ footer, .main {
     padding: 20px 20px 20px 20px;
 }
 
-article {
- box-sizing: border-box;
- border-width: 1px;
- border-radius: 5px;
- margin: 2px;
- text-align: center;
- height: 20vh;
- width: 30vw;
- box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+article{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    box-sizing: border-box;
+    border-width: 1px;
+    border-radius: 5px;
+    margin: 2px;
+    height: 35vh;
+    max-width: 35vw;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+article div{
+    box-sizing: 100%;
+    align-content: center;
+    display: inline-block;
+    margin: auto;
+    text-align: center;
 }
 
 div.section-title {
