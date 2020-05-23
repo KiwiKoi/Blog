@@ -11,9 +11,10 @@ body {
 }
 
 h1 {
+    font-family: "Dancing Script";
     color: rgb(216, 213, 219);
     font-size: 100px;
-    font-weight: bold
+    font-weight: 400;
 }
 
 h2 {
@@ -39,7 +40,7 @@ a {
 
 hr {
     width:10%;
-    border: dotted rgb(104, 104, 104)  6px;
+    border: dotted rgb(161, 140, 140)  6px;
     border-bottom: none;
     margin: auto;
   }
@@ -50,6 +51,11 @@ footer {
 
 footer, .main {
     background-color: #fcfcfc;
+}
+
+.social-icon-footer {
+    color: #42413f;
+    padding: 20px 20px 20px 20px;
 }
 
 article {
@@ -63,11 +69,21 @@ article {
  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+div.section-title {
+    font-family: "Dancing Script";
+    font-size: 20px;
+}
+
 article p {
     width: 200px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.resize-animation-stopper * {
+    animation: none !important;
+    transition: none !important;
 }
 
 .wrapper {
@@ -77,7 +93,7 @@ article p {
   }
 
 .main {
-    padding: 50px 0 50px 0;
+    padding: 50px 0 0px 0;
 }
 
 .latest-posts {
@@ -89,7 +105,7 @@ article p {
     color: #000;
 }
 
-.btn {
+/* .btn {
 	background:linear-gradient(to bottom, #464442 5%, #706e68 100%);
 	background-color:#42413f;
     border-radius:5px;
@@ -99,9 +115,10 @@ article p {
 	color:#ffffff;
 	font-family:'Montserrat', sans-serif;
 	font-size:15px;
-	padding:10px 25px;
+    padding:10px 25px;
+    margin:10px;
 	text-decoration:none;
-}
+} */
 
 @supports (display: flex) {
     @media screen and (min-width: 900px) {
@@ -119,7 +136,7 @@ article p {
     align-items: center;
     min-height: 8vh;
     width: 100%;
-    background-color: #353234;
+    background-color: #58294a;
     z-index: 9;
     position: fixed;
     opacity: 80%;
@@ -133,6 +150,8 @@ ul {
 }
 
 .logo {
+    font-family: "Dancing Script", cursive;
+    font-weight: 400;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 5px;
@@ -194,7 +213,7 @@ ul {
         right: 0px;
         height: 92vh;
         top: 8vh;
-        background-color: #353234;
+        background-color: #58294a;
         display: flex;
         flex-direction: column;
         align-items: center;

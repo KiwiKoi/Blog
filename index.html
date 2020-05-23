@@ -6,16 +6,18 @@
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <title>Blog</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Merriweather|Montserrat|Sacramento&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css?family=Merriweather|Montserrat|Sacramento|Dancing+Script:wght@400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/55e3b5a173.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body class="resize-animation-stopper">
     <nav>
         <div class="logo">
-            <h4>My Blog</h4></div>
+            <h4>My Blog</h4>
+        </div>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="#content">Content</a></li>
@@ -23,10 +25,10 @@
             <li><a href="#">About</a></li>
         </ul>
         <div>
-            <a class="footer-link" href="https://www.instagram.com"><i class="social-icon fab fa-instagram"></i></a>
-            <a class="footer-link" href="https://twitter.com/"><i class="social-icon fab fa-twitter"></i></a>
-            <a class="footer-link" href="https://facebook.com"><i class="social-icon fab fa-facebook-f"></i></a>
-            <a class="footer-link" href=#><i class="social-icon fas fa-envelope"></i></a>
+            <a href="https://www.instagram.com"><i class="social-icon fab fa-instagram"></i></a>
+            <a href="https://twitter.com/"><i class="social-icon fab fa-twitter"></i></a>
+            <a href="https://facebook.com"><i class="social-icon fab fa-facebook-f"></i></a>
+            <a href=#><i class="social-icon fas fa-envelope"></i></a>
         </div>
         <div class="burger">
             <div class="line1"></div>
@@ -35,13 +37,13 @@
         </div>
     </nav>
     <header>
-        <h1 class="heading">This is a blog</h1>        
+        <h1 class="heading">This is a blog</h1>
     </header>
 
     <div id="content" class="main">
         <hr>
         <section class="latest-posts">
-            <div>
+            <div class="section-title">
                 <h2>Latest Posts</h2>
             </div>
             <div class="wrapper">
@@ -72,7 +74,7 @@
             </div>
         </section>
         <section class="second-section">
-            <div>
+            <div class="section-title">
                 <h2>Other Stuff</h2>
             </div>
             <div class="wrapper">
@@ -91,12 +93,21 @@
             </div>
         </section>
         <section id="contact" class="contact">
-            <h2>Get In Touch</h2>
-            <p class="contact-message">Shhh.</p>
-            <a class="btn" href="mailto:blablabla">CONTACT ME</a>
+            <div class="section-title">
+                <h2>Get In Touch</h2>
+            </div>
+            <div>
+                <a class="footer-link" href="https://www.instagram.com"><i class="social-icon-footer fab fa-instagram"></i></a>
+                <a class="footer-link" href="https://twitter.com/"><i class="social-icon-footer fab fa-twitter"></i></a>
+                <a class="footer-link" href="https://facebook.com"><i class="social-icon-footer fab fa-facebook-f"></i></a>
+                <a class="footer-link" href=#><i class="social-icon-footer fas fa-envelope"></i></a>
+            </div>
+            <!-- <a class="btn" href="mailto:blablabla">CONTACT ME</a> -->
         </section>
+        <hr>
     </div>
     <footer>
+
         <p class="copyright">©<span class="copyright-year"></span>.</p>
     </footer>
 
