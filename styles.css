@@ -11,17 +11,17 @@ body {
 }
 
 h1 {
-    color: purple;
+    color: rgb(37, 10, 99);
     font-weight: bold
 }
 
 h2 {
-    color: blue;
+    color: #353234;
 }
 
 
 header {
-    background-color: rgb(250, 181, 153);
+    background-color: rgb(248, 230, 212);
     position: relative;
     padding-top: 200px;
     padding-bottom: 50px;
@@ -34,7 +34,7 @@ a {
 
 hr {
     width:10%;
-    border: dotted #EAF6F6 6px;
+    border: dotted rgb(104, 104, 104)  6px;
     border-bottom: none;
     margin: auto;
   }
@@ -44,22 +44,27 @@ footer {
 }
 
 footer, .main {
-    background-color: rgb(252, 220, 190);
+    background-color: #fcfcfc;
 }
 
 article {
  box-sizing: border-box;
- border-style: solid;
  border-width: 1px;
- border-radius: 20px;
+ border-radius: 5px;
  margin: 2px;
  text-align: center;
  height: 20vh;
  width: 30vw;
+ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+article img {
+    
+
 }
 
 article p {
-    width: 250px;
+    width: 200px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -85,17 +90,22 @@ article p {
 }
 
 .btn {
-	background:linear-gradient(to bottom, #fcc073 5%, #f3d983 100%);
-	background-color:#fabb6a;
-	border-radius:8px;
+	background:linear-gradient(to bottom, #464442 5%, #706e68 100%);
+	background-color:#42413f;
+    border-radius:5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
 	font-family:'Montserrat', sans-serif;
-	font-size:20px;
-	padding:16px 31px;
+	font-size:15px;
+	padding:10px 25px;
 	text-decoration:none;
 }
+
+.social-icon {
+    padding: 20px 10px;
+  }
 
 @supports (display: flex) {
     @media screen and (min-width: 900px) {
@@ -113,7 +123,7 @@ article p {
     align-items: center;
     min-height: 8vh;
     width: 100%;
-    background-color: #5d4954;
+    background-color: #353234;
     z-index: 9;
     position: fixed;
 }
@@ -183,13 +193,13 @@ ul {
         right: 0px;
         height: 92vh;
         top: 8vh;
-        background-color: #5d4954;
+        background-color: #353234;
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 30%;
         transform: translateX(100%);
-        transition: transform 0.5s ease-in;
+        transition: transform 0.3s ease-in;
     }
     .nav-links li{
         opacity: 0;
