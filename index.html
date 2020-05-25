@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <title>Blog</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/main.css">
     <link
         href="https://fonts.googleapis.com/css?family=Merriweather|Montserrat|Sacramento|Dancing+Script:wght@400;500;600;700&display=swap"
         rel="stylesheet">
@@ -20,6 +20,7 @@
         </div>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
+            <li><a href="compose.html" target="_blank">New post</a></li>
             <li><a href="#content">Content</a></li>
             <li><a href="#contact">Contact</a></li>
             <li><a href="#">About</a></li>
@@ -47,9 +48,7 @@
                 <h2>Latest Posts</h2>
             </div>
             <div class="wrapper">
-                <article>
-                    <div><h2>This is an article</h2>
-                        <p>This is some text.</p></div>
+                <article id="article">
                 </article>
                 <article>
                     <div><h2>This is an article</h2>
@@ -102,7 +101,6 @@
                 <a class="footer-link" href="https://facebook.com"><i class="social-icon-footer fab fa-facebook-f"></i></a>
                 <a class="footer-link" href=#><i class="social-icon-footer fas fa-envelope"></i></a>
             </div>
-            <!-- <a class="btn" href="mailto:blablabla">CONTACT ME</a> -->
         </section>
         <hr>
     </div>
@@ -111,6 +109,7 @@
         <p class="copyright">©<span class="copyright-year"></span>.</p>
     </footer>
 
+    <script src="uuidv4.js"></script>
     <script src="scripts.js"></script>
 </body>
 

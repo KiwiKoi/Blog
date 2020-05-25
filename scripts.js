@@ -1,3 +1,11 @@
+const articles = [{
+    id : uuidv4(),
+    title : "First Article",
+    body : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor tellus sapien, quis faucibus quam ultrices ut. Nullam vitae justo odio. Sed vitae nibh at arcu imperdiet aliquam. Maecenas vestibulum viverra porttitor. Phasellus tempus pharetra lacinia. Cras sit amet ultricies ante. Pellentesque lobortis ex risus, pretium convallis nibh fringilla malesuada. Aenean id sodales mauris. Ut ullamcorper accumsan dignissim."
+} 
+]
+const article = articles[0]
+
 const navSlide = () => {
     const burger = document.querySelector(".burger");
     const nav = document.querySelector(".nav-links");
@@ -23,12 +31,6 @@ const navSlide = () => {
 
 navSlide();
 
-document.addEventListener("DOMContentLoaded", function() {
-    const yearSpan = document.querySelector(".copyright-year");
-    const currentYear = new Date().getFullYear();
-    yearSpan.textContent = currentYear;
-});
-
 let resizeTimer;
 window.addEventListener("resize", () => {
   document.body.classList.add("resize-animation-stopper");
@@ -37,3 +39,16 @@ window.addEventListener("resize", () => {
     document.body.classList.remove("resize-animation-stopper");
   }, 400);
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const yearSpan = document.querySelector(".copyright-year");
+    const currentYear = new Date().getFullYear();
+    yearSpan.textContent = currentYear;
+});
+
+document.getElementById("article").innerHTML = articles.map(article =>
+    `<div>
+        <h2>${article.title}</h2>
+        <p>${article.body}</p>
+    </div>`
+    ).join("")
