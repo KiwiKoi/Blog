@@ -1,10 +1,49 @@
-const articles = [{
-    id : uuidv4(),
-    title : "First Article",
-    body : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor tellus sapien, quis faucibus quam ultrices ut. Nullam vitae justo odio. Sed vitae nibh at arcu imperdiet aliquam. Maecenas vestibulum viverra porttitor. Phasellus tempus pharetra lacinia. Cras sit amet ultricies ante. Pellentesque lobortis ex risus, pretium convallis nibh fringilla malesuada. Aenean id sodales mauris. Ut ullamcorper accumsan dignissim."
-} 
-]
-const article = articles[0]
+"use strict"
+
+let articles = getSavedArticles()
+
+const filters = {
+    searchText: "",
+    sortBy: "byEdited, byCreated"
+}
+
+renderArticles(articles, filters)
+
+document.querySelector("#create-article").addEventListener("click", (e) => {
+    const id = uuidv4()
+    const timestamp = moment().valueOf()
+    
+    articles.push({
+        id: id,
+        title: "",
+        body: "",
+        createdAt: timestamp,
+        updatedAt: timestamp
+    })
+    
+    
+    saveArticles(articles)
+    location.assign(`/compose.html#${id}`)
+})
+
+
+document.querySelector("#search-text").addEventListener("input", (e) => {
+    filters.searchText = e.target.value
+    renderArticles(articles, filters)
+})
+
+document.querySelector("#filter-by").addEventListener("change", (e) => {
+    filters.sortBy = e.target.value
+    renderArticles(articles, filters)
+})
+
+window.addEventListener("storage", (e) => {
+    if (e.key === "articles") {
+        articles = JSON.parse(e.newValue)
+        renderArticles(articles, filters)
+        }
+    })
+
 
 const navSlide = () => {
     const burger = document.querySelector(".burger");
@@ -46,9 +85,9 @@ document.addEventListener("DOMContentLoaded", function() {
     yearSpan.textContent = currentYear;
 });
 
-document.getElementById("article").innerHTML = articles.map(article =>
-    `<div>
-        <h2>${article.title}</h2>
-        <p>${article.body}</p>
-    </div>`
-    ).join("")
+// document.getElementById("article").innerHTML = articles.map(article =>
+//     `<div>
+//         <h2>${article.title}</h2>
+//         <p>${article.body}</p>
+//     </div>`
+//     ).join("")
