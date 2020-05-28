@@ -28,7 +28,7 @@ header {
     padding-top: 200px;
     padding-bottom:420px;
     text-align: center;
-    background-image: url("/images/confetti.jpg");
+    background-image: url("../images/confetti.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: 100% 100%;
