@@ -23,7 +23,7 @@ document.querySelector("#create-article").addEventListener("click", (e) => {
     
     
     saveArticles(articles)
-    location.assign(`/compose.html#${id}`)
+    location.assign(`../compose.html#${id}`)
 })
 
 
