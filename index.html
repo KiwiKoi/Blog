@@ -44,32 +44,18 @@
     <div id="content" class="main">
         <hr>
         <section class="latest-posts">
+            <input type="text" id="search-text" placeholder="Filter articles">
+    <select id="filter-by">
+        <option value="byEdited">Sort by last edited</option>
+        <option value="byCreated">Sort by recently created</option>
+        <option value="alphabetical">Sort alphabetically</option>
+    </select>
+    <div id="articles"></div>
+    <button id="create-article">Create Article</button>
             <div class="section-title">
                 <h2>Latest Posts</h2>
             </div>
-            <div class="wrapper">
-                <article id="article">
-                </article>
-                <article>
-                    <div><h2>This is an article</h2>
-                        <p>This is some text.</p></div>
-                </article>
-                <article>
-                    <div><h2>This is an article</h2>
-                        <p>This is some text.</p></div>
-                </article>
-                <article>
-                    <div><h2>This is an article</h2>
-                        <p>This is some text.</p></div>
-                </article>
-                <article>
-                    <div><h2>This is an article</h2>
-                        <p>This is some text.</p></div>
-                </article>
-                <article>
-                    <div><h2>This is an article</h2>
-                        <p>This is some text.</p></div>
-                </article>
+            <div class="wrapper" id="article">
             </div>
         </section>
         <section class="second-section">

@@ -44,6 +44,14 @@ window.addEventListener("storage", (e) => {
         }
     })
 
+document.getElementById("article").innerHTML = articles.map(article =>
+    `<article>
+    <div>
+        <h2>${article.title}</h2>
+        <p>${article.body}</p>
+    </div>
+    </article>`
+    ).join("")
 
 const navSlide = () => {
     const burger = document.querySelector(".burger");
@@ -84,10 +92,3 @@ document.addEventListener("DOMContentLoaded", function() {
     const currentYear = new Date().getFullYear();
     yearSpan.textContent = currentYear;
 });
-
-// document.getElementById("article").innerHTML = articles.map(article =>
-//     `<div>
-//         <h2>${article.title}</h2>
-//         <p>${article.body}</p>
-//     </div>`
-//     ).join("")
