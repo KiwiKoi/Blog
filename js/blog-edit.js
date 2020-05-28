@@ -10,9 +10,9 @@ const articleId = location.hash.substring(1)
 let articles = getSavedArticles()
 let article = articles.find((article) => article.id === articleId)
 
-// if (!article) {
-//     location.assign("../index.html")
-// }
+if (!article) {
+    location.assign("../index.html")
+}
 
 titleElement.value = article.title
 bodyElement.value = article.body

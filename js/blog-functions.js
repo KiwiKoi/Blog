@@ -48,7 +48,7 @@ const generateArticleDOM = (article) => {
     } else {
         textEl.textContent = "Unnamed article"
     }
-    textEl.setAttribute("href", `/compose.html#${article.id}`)
+    textEl.setAttribute("href", `/edit.html#${article.id}`)
     articleEl.appendChild(textEl)
 
 
