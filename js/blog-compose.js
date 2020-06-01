@@ -32,7 +32,7 @@ document.querySelector("#submit-article").addEventListener("click", (e) => {
     
     
     saveArticles(articles)
-    location.assign("/index.html")
+    location.assign("/")
 })
 
 titleElement.addEventListener("input", (e) => {
@@ -53,7 +53,7 @@ bodyElement.addEventListener("input", (e) => {
 removeElement.addEventListener("click", (e) => {
     removeArticle(article.id)
     saveArticles(articles)
-    location.assign("index.html")
+    location.assign("/")
 })
 
 window.addEventListener("storage", (e) => {
