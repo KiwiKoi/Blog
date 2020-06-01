@@ -32,7 +32,7 @@ document.querySelector("#submit-article").addEventListener("click", (e) => {
     
     
     saveArticles(articles)
-    location.assign("index.html")
+    location.assign("/index.html")
 })
 
 titleElement.addEventListener("input", (e) => {
