@@ -11,7 +11,7 @@ let articles = getSavedArticles()
 let article = articles.find((article) => article.id === articleId)
 
 if (!article) {
-    location.assign("../index.html")
+    location.assign("index.html")
 }
 
 titleElement.value = article.title
@@ -36,7 +36,7 @@ bodyElement.addEventListener("input", (e) => {
 removeElement.addEventListener("click", (e) => {
     removeArticle(article.id)
     saveArticles(articles)
-    location.assign("../index.html")
+    location.assign("index.html")
 })
 
 window.addEventListener("storage", (e) => {
@@ -44,7 +44,7 @@ window.addEventListener("storage", (e) => {
         JSON.parse(e.newValue)
         article = articles.find((article) => article.id === articleId)
         if (!article) {
-            location.assign("../index.html")
+            location.assign("index.html")
         }
         titleElement.value = article.title
         bodyElement.value = article.body

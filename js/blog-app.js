@@ -10,20 +10,7 @@ const filters = {
 renderArticles(articles, filters)
 
 document.querySelector("#create-article").addEventListener("click", (e) => {
-    const id = uuidv4()
-    const timestamp = moment().valueOf()
-    
-    articles.push({
-        id: id,
-        title: "",
-        body: "",
-        createdAt: timestamp,
-        updatedAt: timestamp
-    })
-    
-    
-    saveArticles(articles)
-    location.assign(`../compose.html#${id}`)
+    location.assign("compose.html")
 })
 
 
