@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>Blog</title>
+    <link rel="stylesheet" href="#">
+</head>
+<body>
+    <header>
+        <h1>Edit Post</h1>
+    </header>
+    <div>
+        <a href="compose.html">Compose</a>
+        <a href="edit.html">Edit</a>
+        <a href="article.html">Article</a>
+        <a href="index.html">Home</a>
+    </div>
+
+        <a href="/index.html">Main Page</a>
+        <br>
+        <input id="article-title" placeholder="Article title">
+        <br>
+        <span id="last-edited"></span>
+        <textarea id="article-body" placeholder="Enter article text" cols="50" rows="10"></textarea>
+        <button id="remove-article">Remove Article</button>
+
+    <footer>
+        <p class="copyright">©<span class="copyright-year"></span>.</p>
+    </footer>
+    <script src="js/uuidv4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.26.0/moment-with-locales.min.js"></script>
+    <script src="js/blog-functions.js"></script>
+    <script src="js/blog-compose.js"></script>
+</body>
